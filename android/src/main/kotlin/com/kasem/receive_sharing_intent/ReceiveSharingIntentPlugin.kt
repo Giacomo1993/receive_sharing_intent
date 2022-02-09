@@ -135,7 +135,7 @@ class ReceiveSharingIntentPlugin : FlutterPlugin, ActivityAware, MethodCallHandl
                 eventSinkText?.success(latestText)
             }
             (intent.type?.startsWith("text/*") == true)
-                    && intent.action == Intent.ACTION_SEND_MULTIPLE) -> { // Sharing images or videos for Whatsapp
+                    && intent.action == Intent.ACTION_SEND_MULTIPLE -> { // Sharing images or videos for Whatsapp
 
                 val value = getMediaUris(intent)
                 if (initial) initialMedia = value
